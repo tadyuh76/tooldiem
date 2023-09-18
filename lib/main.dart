@@ -22,9 +22,24 @@ final huy = Student(
   address:
       "320/39 Bình Trị Đông, Phường Bình Trị Đông, Quận Bình Tân, TP. Hồ Chí Minh",
   fb: "https://facebook.com/tadyuh/",
+  email: "tadyuh76@gmail.com",
+  edumail: "huyhuong.31231021639@st.ueh.edu.vn",
 );
 
-final data = [huy, huy];
+final nhu = Student(
+  name: "Lý Hồng Như",
+  id: "31231021252",
+  lop: "TSP001",
+  khoa: "Du lịch",
+  nganh: "Quản trị lữ hành",
+  phone: "0908227514",
+  address: "4 Trịnh Đình Thảo, p. Hoà Thạnh, q. Tân Phú",
+  fb: "https://www.facebook.com/nhu.hong.9047506",
+  email: "Lyhongnhu290@gmail.com",
+  edumail: "nhuly.31231021252@st.ueh.edu.vn",
+);
+
+final data = [huy, nhu];
 
 class TouchableText extends StatelessWidget {
   final String text;
@@ -73,20 +88,18 @@ class App extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      TouchableText(huy.name),
-                      TouchableText(huy.id),
-                      TouchableText(huy.lop),
-                      TouchableText(huy.phone),
-                      TouchableText(huy.khoa),
-                      TouchableText(huy.nganh),
-                      TouchableText(huy.address),
-                      TouchableText(huy.fb),
-                    ],
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TouchableText(data[index].name),
+                    TouchableText(data[index].id),
+                    TouchableText(data[index].lop),
+                    TouchableText(data[index].phone),
+                    TouchableText(data[index].khoa),
+                    TouchableText(data[index].nganh),
+                    TouchableText(data[index].address),
+                    TouchableText(data[index].fb),
+                  ],
                 ),
               );
             },

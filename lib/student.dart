@@ -7,6 +7,8 @@ class Student {
   final String phone;
   final String address;
   final String fb;
+  final String email;
+  final String edumail;
 
   Student({
     required this.name,
@@ -17,5 +19,7 @@ class Student {
     required this.phone,
     required this.address,
     required this.fb,
+    required this.email,
+    required this.edumail,
   });
 }
